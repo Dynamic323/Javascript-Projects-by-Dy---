@@ -97,31 +97,29 @@ const questions = [
 ];
 
 // Custome aleart message
-let alert_div = document.createElement("div");
-function Alert(msg, bg) {
-  alert_div.classList.add("alert_div");
-  alert_div.textContent = `${msg}`;
-  alert_div.style.backgroundColor = `${bg}`;
-  document.body.append(alert_div);
+function Alert(msg, type) {
+  const alertDiv = document.createElement("div");
+  alertDiv.className = `alert ${type}`;
+  alertDiv.textContent = msg;
+
+  document.body.appendChild(alertDiv);
 
   setTimeout(() => {
-    alert_div.classList.remove("alert_div");
-    alert_div.textContent = "";
+    alertDiv.remove();
   }, 3000);
 }
-alert_div.classList.add("alert_div");
 
 const myalert = {
   success(msg) {
-    Alert(`${msg}`, "green");
+    Alert(`${msg}`, "alert-success");
   },
 
   error(msg) {
-    Alert(`${msg}`, "red");
+    Alert(`${msg}`, "alert-error");
   },
 
   loading(msg) {
-    Alert(`${msg}`, "greenYellow");
+    Alert(`${msg}`, "alert-loading");
   },
 };
 // from validation
@@ -132,11 +130,12 @@ form.addEventListener("submit", (e) => {
   const userNameValue = userName.value.trim();
   const emailValue = Phone_email.value.trim();
 
-  if (userNameValue == "" || emailValue.value == "") {
-    myalert.error("invalid credentials ");
+  if (userNameValue == "" || emailValue == "") {
+    myalert.error("Invalid input. Please fill out all fields.");
   } else if (userNameValue.length < 4) {
-    myalert.error("User name must be at least 4 chaaracters ");
+    myalert.error("Username must be at least 4 characters long.");
   } else {
+    myalert.success("Form submitted successfully!");
     question_section.style.display = "flex";
     form.style.display = "none";
     currentQ(currentIndex);
@@ -224,7 +223,8 @@ function HandelNext() {
       currentIndex += 1;
       currentQ(currentIndex);
     } else {
-      Alert("Please select one option");
+      //   Alert("");
+      myalert.error("Please select one option");
     }
   } else {
     Display();

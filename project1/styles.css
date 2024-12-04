@@ -34,7 +34,9 @@ main {
 .h2 {
   color: rgba(0, 0, 0, 0.928);
 }
-.alert_div {
+
+/* transform: t; */
+.alert {
   position: fixed;
   top: 10px;
   width: 25%;
@@ -45,7 +47,37 @@ main {
   justify-content: center;
   align-items: center;
   height: 10%;
-  /* transform: t; */
+
+  z-index: 1000;
+  animation: fade-in-out 3s ease-in-out;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-error {
+  background-color: red !important;
+}
+
+.alert-loading {
+  background-color: yellow;
+  color: black;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .question {
