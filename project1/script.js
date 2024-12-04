@@ -261,20 +261,20 @@ const Display = () => {
         <h2> ${msg} </h2>
         <br>
 
-         <div class="">
+         <div class="contact-container">
       <span
         >Contact Dycoder on <i class="fa-solid fa-hand-point-down"></i
       ></span>
 
       <div class="socials">
-        <a href="">
+        <a href="tel:09161712483">
           <i class="fa-solid fa-phone"></i>
         </a>
-        <a href="">
+        <a href="https://web.facebook.com/tina.otamere.9">
           <i class="fa-brands fa-facebook"></i>
         </a>
 
-        <a href="">
+        <a href="https://wa.link/pet68v">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>

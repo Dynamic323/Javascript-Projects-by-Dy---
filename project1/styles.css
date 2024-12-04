@@ -127,6 +127,56 @@ label {
   background-color: tomato !important;
   border: none;
 }
+
+/* Contact Section */
+.contact-container {
+  text-align: center;
+  padding: 20px;
+  /* background-color: tomato; */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-container span {
+  font-size: 1.2rem;
+  color: tomato;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact-container i {
+  margin-left: 5px;
+  color: #1f2937;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  background-color: tomato;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.socials a:hover {
+  background-color: #1f2937;
+  transform: scale(1.1);
+}
+
+.socials i {
+  display: block;
+}
 @media (max-width: 810px) {
   section {
     height: 100%;
