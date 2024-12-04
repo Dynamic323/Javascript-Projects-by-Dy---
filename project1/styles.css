@@ -1,0 +1,137 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  background: linear-gradient(
+    90deg,
+    #6a4b17,
+    #6a491e,
+    #694824,
+    #674729,
+    #65462e,
+    #624533,
+    #5f4537,
+    #5b453b
+  );
+}
+section {
+  height: 60%;
+  padding: 12px 32px;
+  border-radius: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: -4px 0px 31px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -4px 0px 31px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: -4px 0px 31px 4px rgba(0, 0, 0, 0.6);
+}
+main {
+  font-size: 22px;
+}
+.h2 {
+  color: rgba(0, 0, 0, 0.928);
+}
+.alert_div {
+  position: fixed;
+  top: 10px;
+  width: 25%;
+  right: 10px;
+  box-shadow: 4px 10px 22px rgb(69, 69, 69);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  /* transform: t; */
+}
+
+.question {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  /* top: -2em; */
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 22px;
+  align-items: self-start;
+}
+
+.options button {
+  background-color: transparent;
+  border: none;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.click {
+  background-color: tomato !important;
+}
+
+.red {
+  background-color: red;
+}
+.display_div {
+  display: none;
+}
+#form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 7px 0px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid tomato;
+  font-size: 18px;
+}
+input:focus {
+  background-color: rgba(255, 99, 71, 0.801);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+label {
+  color: rgba(0, 0, 0, 0.851);
+}
+#form-btn {
+  margin-top: 18px;
+  padding: 14px 0px;
+  cursor: pointer;
+  background-color: tomato;
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+}
+
+.sp {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.833);
+}
+
+.btn-div {
+  padding: 20px 0px !important;
+  display: flex;
+  gap: 22px;
+}
+.btn-div button {
+  padding: 12px 18px;
+  background-color: tomato !important;
+  border: none;
+}
+@media (max-width: 810px) {
+  section {
+    height: 100%;
+  }
+  main {
+    font-size: 18px !important;
+  }
+}
