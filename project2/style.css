@@ -1,0 +1,17 @@
+:root{
+    --grey:grey;
+}
+
+body {
+  background-color: rgb(29, 29, 33);
+  color: #efff;
+  display: flex;
+  height: 90vh;
+}
+.container {
+  margin: auto;
+}
+.heading{
+    font-family: monospace;
+    color: var(--grey);
+}
