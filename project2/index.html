@@ -6,68 +6,91 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
       <h1 class="heading">Dy's Password Generator</h1>
 
-      <div class="">
+      <div class="display_div">
         <input type="text" id="display" />
       </div>
 
-      <div class="">
-        <div class="">
-          <span> Charater lenght</span>
+      <div class="content_container">
+        <div class="char_div">
+          <span> Charater lenght : </span>
 
           <span id="show"></span>
         </div>
         <div class="">
-          <input type="range" min="5" max="30" step="5" value="5" id="range" />
-          <div>
+          <div class="range_div">
             <input
-              type="checkbox"
-              class="controls"
-              id="check1"
-              data-case="upper"
+              type="range"
+              min="5"
+              max="30"
+              step="5"
+              value="5"
+              id="range"
+
             />
-            <label for="check1"> include uppercase Letters</label>
           </div>
-          <div>
-            <input
-              type="checkbox"
-              class="controls"
-              id="check2"
-              data-case="lower"
-            />
-            <label for="check2"> include lowercase Letters</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              class="controls"
-              id="check3"
-              data-case="numbers"
-            />
-            <label for="check3"> include Numbers</label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              class="controls"
-              id="check4"
-              data-case="symbols"
-            />
-            <label for="check4"> include Symbols</label>
-          </div>
+          <section>
+            <div class="control_div">
+              <input
+                type="checkbox"
+                class="controls"
+                id="check1"
+                data-case="upper"
+                checked
+              />
+              <label for="check1"> include uppercase Letters</label>
+            </div>
+            <div class="control_div">
+              <input
+                type="checkbox"
+                class="controls"
+                id="check2"
+                data-case="lower"
+                checked
+              />
+              <label for="check2"> include lowercase Letters</label>
+            </div>
+            <div class="control_div">
+              <input
+                type="checkbox"
+                class="controls"
+                id="check3"
+                data-case="numbers"
+              />
+              <label for="check3"> include Numbers</label>
+            </div>
+            <div class="control_div">
+              <input
+                type="checkbox"
+                class="controls"
+                id="check4"
+                data-case="symbols"
+              />
+              <label for="check4"> include Symbols </label>
+            </div>
+          </section>
+        
 
           <!-- bar -->
-          <div class="" id="bar">
-            <span>Strenght </span>
-            <span></span><span></span><span></span>
+          <div class="bardiv">
+            <div class="bar-" id="bar">
+                <span>Strenght </span>
+                <div class="">
+                    <span></span><span></span><span></span>
+                </div>
+              </div>
+    
+              <button id="generatebtn">Generate</button>
           </div>
-
-          <button id="generatebtn">Generate</button>
         </div>
       </div>
     </div>
