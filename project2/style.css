@@ -9,7 +9,7 @@ body {
   background-color: var(--bg);
   color: #efff;
   display: flex;
-  height: 90vh;
+  height: 98vh;
 }
 .container {
   margin: auto;
@@ -134,7 +134,6 @@ label {
 
 .contact {
   text-align: center;
-  padding: 20px;
 }
 
 .contact h4 {
