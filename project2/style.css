@@ -9,7 +9,7 @@ body {
   background-color: var(--bg);
   color: #efff;
   display: flex;
-  height: 98vh;
+  height: 100vh;
 }
 .container {
   margin: auto;
@@ -187,7 +187,18 @@ label {
   }
 }
 @media (max-width: 500px) {
-  .container {
-    width: 96%;
+  .heading {
+
+    font-size: 24px;
   }
+  .container {
+    width: 86%;
+  }
+
+  .content_container {
+    font-size: 17px;}
+
+    .char_div {
+      font-size: 18px;
+    }
 }
