@@ -89,6 +89,11 @@ label {
   padding-left: 22px;
   margin-bottom: 12px;
 }
+.bar- div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 #generatebtn {
   background-color: var(--acentcolor);
   height: 45px;
@@ -102,6 +107,18 @@ label {
 
 #generatebtn:hover {
   scale: 0.9;
+}
+.text {
+  width: 50%;
+}
+.bari {
+  width: 50%;
+  gap: 10px;
+}
+
+.bari span {
+  /* width: 80%; */
+  height: 70%;
 }
 
 @media (max-width: 1000px) {

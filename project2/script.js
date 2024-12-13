@@ -16,50 +16,6 @@ const Numbers = "0123456789";
 const Symbols = "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~\\";
 
 showText.textContent = rangeBar.value;
-// controls.forEach((element) => {
-//   element.addEventListener("change", () => {
-//     if (element.checked && element.dataset.case == "upper") {
-//       isupper = true;
-//       generatePsw(isupper);
-//     } else if (element.dataset.case == "upper" && !element.checked) {
-//       isupper = false;
-//       generatePsw(isupper);
-//     }
-//     if (element.checked && element.dataset.case == "lower") {
-//       islower = true;
-//       generatePsw(false ,islower);
-//     } else if (element.dataset.case == "lower" && !element.checked) {
-//       islower = false;
-//       generatePsw(false, islower);
-//     }
-
-//     if (element.checked && element.dataset.case == "numbers") {
-//       isnumber = true;
-
-//       generatePsw(false, false,false,isnumber);
-//     } else if (element.dataset.case == "numbers" && !element.checked) {
-//       isnumber = false;
-
-//       generatePsw(false, false,false, isnumber);
-//     }
-
-//     if (element.checked && element.dataset.case == "symbols") {
-//       isSymbol = true;
-//       generatePsw(false, false, isSymbol);
-//     } else if (element.dataset.case == "symbols" && !element.checked) {
-//       isSymbol = false;
-//       generatePsw(false, false, isSymbol);
-//     }
-//     //   // console.log(element.dataset.case);
-//   });
-// });
-
-// console.log(rangeBar.value);
-
-function HandelPsw() {
-  console.log(rangeBar.value);
-  showText.textContent = rangeBar.value;
-}
 
 let generatebtn = document.getElementById("generatebtn");
 
@@ -73,10 +29,40 @@ function generatePsw() {
   let islower = document.querySelector('[data-case="lower"]').checked;
   let isSymbol = document.querySelector('[data-case="numbers"]').checked;
   let isnumber = document.querySelector('[data-case="symbols"]').checked;
-  allowedChars += isupper ? UppercaseLetters : "";
-  allowedChars += islower ? LowercaseLetters : "";
-  allowedChars += isnumber ? Numbers : "";
-  allowedChars += isSymbol ? Symbols : "";
+  let bar1 = document.querySelector('[data-bar="bar-1"]');
+
+  let width = 0;
+  let bg;
+  let text;
+  if (isupper) {
+    allowedChars += UppercaseLetters;
+    width += 20;
+    bg = "to right, #FF0000, #FF6347";
+    // text = "bad ";
+  }
+  if (islower) {
+    allowedChars += LowercaseLetters;
+    width += 20;
+    bg = "to right, #FFA500, #FFD700";
+    // text = "good ";
+  }
+  if (isnumber) {
+    allowedChars += Numbers;
+    width += 20;
+    bg = "to right, #FFFF00, #ADFF2F ";
+    // text = "better ";
+  }
+  if (isSymbol) {
+    allowedChars += Symbols;
+    width += 20;
+    bg = "to right, #008000, #00FF00";
+  }
+
+  console.log(width);
+
+  bar1.style.width = `${width}%`;
+  bar1.style.background = `linear-gradient(${bg})`;
+  // // bar1.textContent = text;
 
   if (allowedChars.length <= 1) {
     return alert("At least 1 set of character need to be selcted");
@@ -90,4 +76,7 @@ function generatePsw() {
   return (display.value = password);
 }
 generatebtn.addEventListener("click", generatePsw);
-rangeBar.addEventListener("change", HandelPsw);
+rangeBar.addEventListener(
+  "change",
+  () => (showText.textContent = rangeBar.value)
+);

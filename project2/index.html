@@ -17,7 +17,7 @@
       <h1 class="heading">Dy's Password Generator</h1>
 
       <div class="display_div">
-        <input type="text" id="display" />
+        <input type="text" id="display" disabled />
       </div>
 
       <div class="content_container">
@@ -35,7 +35,6 @@
               step="5"
               value="5"
               id="range"
-
             />
           </div>
           <section>
@@ -78,18 +77,19 @@
               <label for="check4"> include Symbols </label>
             </div>
           </section>
-        
 
           <!-- bar -->
           <div class="bardiv">
             <div class="bar-" id="bar">
+              <div class="text">
                 <span>Strenght </span>
-                <div class="">
-                    <span></span><span></span><span></span>
-                </div>
               </div>
-    
-              <button id="generatebtn">Generate</button>
+              <div class="bari">
+                <span data-bar="bar-1"></span>
+              </div>
+            </div>
+
+            <button id="generatebtn">Generate</button>
           </div>
         </div>
       </div>
