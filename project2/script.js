@@ -33,24 +33,20 @@ function generatePsw() {
 
   let width = 0;
   let bg;
-  let text;
   if (isupper) {
     allowedChars += UppercaseLetters;
     width += 20;
     bg = "to right, #FF0000, #FF6347";
-    // text = "bad ";
   }
   if (islower) {
     allowedChars += LowercaseLetters;
     width += 20;
     bg = "to right, #FFA500, #FFD700";
-    // text = "good ";
   }
   if (isnumber) {
     allowedChars += Numbers;
     width += 20;
     bg = "to right, #FFFF00, #ADFF2F ";
-    // text = "better ";
   }
   if (isSymbol) {
     allowedChars += Symbols;
@@ -62,7 +58,6 @@ function generatePsw() {
 
   bar1.style.width = `${width}%`;
   bar1.style.background = `linear-gradient(${bg})`;
-  // // bar1.textContent = text;
 
   if (allowedChars.length <= 1) {
     return alert("At least 1 set of character need to be selcted");
@@ -75,6 +70,17 @@ function generatePsw() {
   }
   return (display.value = password);
 }
+
+let copyicon = document.querySelector(".copyicon");
+
+copyicon.addEventListener("click", function () {
+  if (display.value == "") {
+    return;
+  }
+
+  const cb = navigator.clipboard;
+  cb.writeText(display.value).then(() => alert("Password copied!"));
+});
 generatebtn.addEventListener("click", generatePsw);
 rangeBar.addEventListener(
   "change",

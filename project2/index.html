@@ -1,23 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags for SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
-    <script src="./script.js" defer></script>
+
+    <!-- Title of the webpage (important for SEO) -->
+    <title>Password Generator - Secure and Random Passwords</title>
+
+    <!-- Meta Description for SEO -->
+    <meta
+      name="description"
+      content="Generate strong and secure random passwords for your online accounts with our easy-to-use password generator. Stay safe online!"
+    />
+
+    <!-- Keywords for SEO -->
+    <meta
+      name="keywords"
+      content="password generator, secure passwords, random passwords, password tool, generate passwords"
+    />
+
+    <!-- Author of the website -->
+    <meta name="author" content="Dy coder" />
+
+    <!-- Open Graph Meta Tags for Social Media Sharing (Facebook, LinkedIn, etc.) -->
+    <meta
+      property="og:title"
+      content="Password Generator - Secure and Random Passwords"
+    />
+    <meta
+      property="og:description"
+      content="Generate strong and secure random passwords for your online accounts with our easy-to-use password generator. Stay safe online!"
+    />
+    <meta
+      property="og:image"
+      content="https://www.malwarebytes.com/wp-content/uploads/sites/2/2023/08/password-generator-3.png"
+    />
+    <!-- Replace with your actual image URL -->
+    <meta property="og:url" content="https://example.com" />
+    <!-- Replace with your actual website URL -->
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags for Sharing on Twitter -->
+    <meta
+      name="twitter:title"
+      content="Password Generator - Secure and Random Passwords"
+    />
+    <meta
+      name="twitter:description"
+      content="Generate strong and secure random passwords for your online accounts with our easy-to-use password generator. Stay safe online!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/path-to-your-image.jpg"
+    />
+    <!-- Replace with your actual image URL -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Linking to Stylesheets -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Linking to External Icons (FontAwesome for icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
+
+    <!-- Linking to your JavaScript file -->
+    <script src="./script.js" defer></script>
+
+    <!-- Favicon (optional but recommended) -->
+    <link rel="icon" href="https://example.com/favicon.ico" />
+    <!-- Replace with your favicon image -->
   </head>
+
   <body>
     <div class="container">
       <h1 class="heading">Dy's Password Generator</h1>
 
       <div class="display_div">
         <input type="text" id="display" disabled />
+        <i class="fa-solid fa-copy copyicon"></i>
       </div>
 
       <div class="content_container">
