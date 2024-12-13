@@ -39,7 +39,7 @@ body {
   position: absolute;
   top: 40%;
   left: 90%;
-  font-size:22px ;
+  font-size: 22px;
   color: var(--acentcolor);
   cursor: pointer;
 }
@@ -130,6 +130,56 @@ label {
 .bari span {
   /* width: 80%; */
   height: 70%;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h4 span {
+  margin-left: 10px;
+  width: 50px;
+  height: 2px;
+  background-color: #3a86ff; /* Custom color for underline */
+}
+
+/* Style for icons */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icons .icon {
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons .icon:hover {
+  color: #3a86ff; /* Hover color for icons */
+  transform: scale(1.1);
+}
+
+.contact-icons .icon i {
+  transition: transform 0.3s ease;
+}
+
+.contact-icons .icon:hover i {
+  transform: rotate(15deg); /* Optional: small rotation effect on hover */
 }
 
 @media (max-width: 1000px) {
